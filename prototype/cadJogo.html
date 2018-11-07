@@ -1,0 +1,243 @@
+<html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="menu-container">
+        <ul class="menu clearfix">
+            <li>
+                <a href="index.html">Ash</a>
+            </li>
+            <li>
+                <a href="#">Jogos</a>
+                <!-- Nível 1 -->
+                <!-- submenu -->
+                <ul class="sub-menu clearfix">
+                    <li>
+                        <a href="#">Aventura</a>
+                    </li>
+                    <li>
+                        <a href="generos/luta.html">Luta</a>
+                    </li>
+                    <li>
+                        <a href="#">FPS</a>
+                    </li>
+                    <li>
+                        <a href="#">RPG</a>
+                    </li>
+                    <li>
+                        <a href="#">MMO</a>
+                    </li>
+                </ul>
+                <!-- submenu -->
+            </li>
+
+            <li>
+                <a href="#">Contato</a>
+            </li>
+
+            <li class="liSearch" style="background-color: black;">
+                    <input type="text" placeholder="Pesquisar" />
+                  <a href="generos/luta.html" 
+                   class="btn btn-primary font-weight-normal"
+                   style="text-transform: capitalize;
+                   display: inline-block;">Pesquisar</a>
+                </li>
+          
+                <li style="background-color: black;">
+                  <a href="cadJogo.html" 
+                  class="btn btn-primary font-weight-normal" 
+                  style="text-transform: capitalize;
+                  display: inline-block;">Cadastrar Jogo</a>
+                </li>
+        </ul>
+    </div>
+
+
+
+    <div class="container register" style="margin: 1% 10% 0% 10%;">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Cadastrar novo Jogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lista de Jogos cadastrados</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <br>
+                        <h1 class="display-1" style="font-size: 2.8em;">Novo Jogo </h1>
+                        <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" 
+                                type="button" 
+                                id="dropdownMenuButton" 
+                                data-toggle="dropdown" 
+                                aria-haspopup="true" 
+                                aria-expanded="false">
+                                  Gênero
+                                </button>
+                                    <a href="cadGenero.html"
+                                    class="btn btn-secondary">
+                                    Novo Gênero
+                                    </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Luta</a>
+                                  <a class="dropdown-item" href="#">Ação</a>
+                                  <a class="dropdown-item" href="#">FPS</a>
+                                </div>
+                              </div>
+                        <br>
+                        <div style="width: 100%; overflow: hidden;">
+                                <form autocomplete="anyrandomstring"  method="post">
+                                    <div style="width: 300px; float: left;" >
+                                        <input   
+                                        type="text" 
+                                        name="urlImagem" 
+                                        class="form-control" 
+                                        placeholder="URL Imagem*" 
+                                        value=""
+                                        required="" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <input  
+                                        type="text"
+                                        name="nome" 
+                                        class="form-control" 
+                                        placeholder="Nome*" 
+                                        value="" 
+                                        required="" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <input   
+                                        type="text" 
+                                        name="desenvolvedora" 
+                                        class="form-control" 
+                                        placeholder="Desenvolvedora*" 
+                                        value="" 
+                                        required="" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <input   
+                                        type="text" 
+                                        name="plataforma" 
+                                        class="form-control" 
+                                        placeholder="Plataforma*" 
+                                        value="" 
+                                        required="" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                    </div>
+
+                                    <div style="margin-left: 300x;">
+                                        <input   
+                                        type="text" 
+                                        name="quantJogadores"
+                                        class="form-control" 
+                                        placeholder="Quantidade Jogadores*"
+                                        value=""
+                                        required="" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                         />
+                                        <input   
+                                        type="text" 
+                                        name="compatControle" 
+                                        class="form-control" 
+                                        placeholder="Compatibilidade Controle*" 
+                                        value="" 
+                                        required=""
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <input   
+                                        type="date" 
+                                        name="dataLancamento" 
+                                        class="form-control" 
+                                        placeholder="Data de Lançamento*" 
+                                        value="" 
+                                        required="" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <input   
+                                        type="number" 
+                                        name="preco" 
+                                        class="form-control"
+                                         placeholder="Preço*" 
+                                         value="" 
+                                         required="" 
+                                         style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                    </div>
+                                    <br>
+                                    <h1 class="display-1" style="font-size: 2.8em;">Descrição</h1>
+                                    <br>
+                                    <textarea 
+                                    name="descricao" 
+                                    placeholder="Descrição"
+                                    required="" 
+                                    cols="70" 
+                                    rows="5"
+                                    >
+                                    </textarea>
+                                    <br>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="submit" name="formJogo" class="btnNav" value="Cadastrar" />
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade show text-align form-new" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <br>
+                        <h1 class="display-1" style="font-size: 2.8em;">Jogos cadastrados</h1>
+                        <hr>
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div style="margin-right: 25px; text-align: center;" class="border">
+                                        <h1 class="display-4" style="font-size: 1.5em; margin: 0 1% 0 1%;">SOULCALIBUR VI </h1>
+                                        <button class="btnNav" style="margin: 0 auto;">Editar</button>
+                                        <button class="btnNav">Excluir</button>
+                                    </div>
+                                </td>
+                                <td>
+                                        <div style="margin-right: 25px; text-align: center;" class="border">
+                                            <h1 class="display-4" style="font-size: 1.5em;margin: 0 1% 0 1%;">Tekken 7</h1>
+                                            <button class="btnNav" style="margin: 0 auto;">Editar</button>
+                                            <button class="btnNav">Excluir</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                            <div style="margin-right: 25px; text-align: center;" class="border">
+                                                <h1 class="display-4" style="font-size: 1.5em; margin: 0 1% 0 1%;">Helicóptero de ataque</h1>
+                                                <button class="btnNav" style="margin: 0 auto;">Editar</button>
+                                                <button class="btnNav">Excluir</button>
+                                            </div>
+                                        </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
