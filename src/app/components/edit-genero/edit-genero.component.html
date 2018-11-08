@@ -1,0 +1,29 @@
+<div class="container register" style="margin: 1% 10% 0% 10%;">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Editar Gênero</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <br>
+            <h1 class="display-1" style="font-size: 2.8em;">Editar Gênero </h1>
+            <hr>
+            <br>
+            <div style="width: 100%; overflow: hidden;">
+  
+              <form (ngSubmit)="onSubmit()" #newGenero="ngForm">
+                <input type="text" #name="ngModel" [(ngModel)]="model.nome" name="nome" class="form-control" placeholder="Gênero*" required=""/>
+                <br>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary" />
+                  <button [routerLink]="['../../../generos/new']" class="btn btn-danger" style="margin-left: 3%;">
+                    Voltar
+                  </button>
+                </div>
+              </form>
+  
+            </div>
+          </div>

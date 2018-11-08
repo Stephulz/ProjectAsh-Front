@@ -1,0 +1,51 @@
+<div class="container register" style="margin: 1% 10% 0% 10%;">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Cadastrar novo Gênero</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lista de Gêneros cadastrados</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <br>
+          <h1 class="display-1" style="font-size: 2.8em;">Novo Gênero </h1>
+          <hr>
+          <br>
+          <div style="width: 100%; overflow: hidden;">
+
+            <form (ngSubmit)="onSubmit()" #newGenero="ngForm">
+              <input type="text" #name="ngModel" [(ngModel)]="model.nome" name="nome" class="form-control" placeholder="Gênero*" required=""
+              (click)='buscarGenero()'/>
+              <br>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" />
+                <button [routerLink]="['../../jogos/new']" class="btn btn-danger" style="margin-left: 3%;">
+                  Voltar
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <div class="tab-pane fade show text-align form-new" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <br>
+          <h1 class="display-1" style="font-size: 2.8em;">Gêneros cadastrados</h1>
+          <hr>
+          <br>
+          <div class="row">
+              <div *ngFor="let genero of generos; let i = index" style="margin: 0 25px 15px 0; text-align: center" class="border">
+                <h1 class="display-4" style="font-size: 1.5em; text-align: center; margin: 0 1% 0 1%;">{{genero.nome}}</h1>
+                <button class="btnNav" style="margin: auto;" [routerLink]="['../../generos/edit', genero.id]">Editar</button>
+                <button class="btnNav" (click)="deletarGenero(genero.id)">Excluir</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

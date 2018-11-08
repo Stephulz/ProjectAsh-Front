@@ -1,0 +1,178 @@
+
+    <div class="container register" style="margin: 1% 10% 0% 10%;">
+      <div class="row">
+          <div class="col-md-12">
+              <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Cadastrar novo Jogo</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lista de Jogos cadastrados</a>
+                  </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <br>
+                      <h1 class="display-1" style="font-size: 2.8em;">Novo Jogo </h1>
+                      <div class="dropdown">
+                              <button class="btn btn-primary dropdown-toggle" 
+                              type="button" 
+                              id="dropdownMenuButton" 
+                              data-toggle="dropdown" 
+                              aria-haspopup="true" 
+                              aria-expanded="false">
+                                Gênero
+                              </button>
+                                  <a [routerLink]="['../../generos/new']"
+                                  class="btn btn-secondary">
+                                  Novo Gênero
+                                  </a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a *ngFor="let genero of generos"
+                                 [(ngModel)]="generoId"
+                                 class="dropdown-item"
+                                 (click)="test(genero.id)"
+                                 ngDefaultControl> 
+                                     {{genero.nome}} 
+                                  </a>
+                              </div>
+                            </div>
+                      <br>
+                      <div style="width: 100%; overflow: hidden;">
+                              <form (ngSubmit)="onSubmit()" #newGenero="ngForm">
+                                  <div style="width: 300px; float: left;" >
+                                      <input   
+                                      type="text" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.urlImagem" 
+                                      name="urlImagem"
+                                      class="form-control" 
+                                      placeholder="URL Imagem*"  
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      />
+                                      <input  
+                                      type="text"
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.nome" 
+                                      name="nome"
+                                      class="form-control" 
+                                      placeholder="Nome*"  
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      />
+                                      <input   
+                                      type="text" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.desenvolvedora" 
+                                      name="desenvolvedora"
+                                      class="form-control" 
+                                      placeholder="Desenvolvedora*"  
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      />
+                                      <input   
+                                      type="text" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.plataforma" 
+                                      name="plataforma"
+                                      class="form-control" 
+                                      placeholder="Plataforma*"  
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      />
+                                  </div>
+
+                                  <div style="margin-left: 300x;">
+                                      <input   
+                                      type="text" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.quantJogadores" 
+                                      name="quantJogadores"
+                                      class="form-control" 
+                                      placeholder="Quantidade Jogadores*" 
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                       />
+                                      <input   
+                                      type="text" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.compatControle" 
+                                      name="compatJogadores" 
+                                      class="form-control" 
+                                      placeholder="Compatibilidade Controle*" 
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      />
+                                      <input   
+                                      type="date" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.dataLancamento" 
+                                      name="dataLancamento"
+                                      class="form-control" 
+                                      placeholder="Data de Lançamento*"  
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      />
+                                      <input   
+                                      type="number" 
+                                      #name="ngModel" 
+                                      [(ngModel)]="model.preco" 
+                                      name="preco" 
+                                      class="form-control"
+                                      placeholder="Preço*" 
+                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                      min="1" 
+                                      max="1000"
+                                      step="any"
+                                      />
+                                  </div>
+                                  <br>
+                                  <h1 class="display-1" style="font-size: 2.8em;">Descrição</h1>
+                                  <br>
+                                  <textarea 
+                                  #name="ngModel" 
+                                  [(ngModel)]="model.descricao" 
+                                  name="descricao" 
+                                  placeholder="Descrição..."
+                                  cols="70" 
+                                  rows="5"
+                                  >
+                                  </textarea>
+                                  <br>
+                                  <br>
+                                  <div class="form-group">
+                                      <input type="submit" name="formJogo" class="btnNav" value="Cadastrar" />
+                                  </div>
+                              </form>
+                      </div>
+                  </div>
+
+                  <div class="tab-pane fade show text-align form-new" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                      <br>
+                      <h1 class="display-1" style="font-size: 2.8em;">Jogos cadastrados</h1>
+                      <hr>
+                      <br>
+                      <table>
+                          <tr>
+                              <td>
+                                  <div style="margin-right: 25px; text-align: center;" class="border">
+                                      <h1 class="display-4" style="font-size: 1.5em; margin: 0 1% 0 1%;">SOULCALIBUR VI </h1>
+                                      <button class="btnNav" style="margin: 0 auto;">Editar</button>
+                                      <button class="btnNav">Excluir</button>
+                                  </div>
+                              </td>
+                              <td>
+                                      <div style="margin-right: 25px; text-align: center;" class="border">
+                                          <h1 class="display-4" style="font-size: 1.5em;margin: 0 1% 0 1%;">Tekken 7</h1>
+                                          <button class="btnNav" style="margin: 0 auto;">Editar</button>
+                                          <button class="btnNav">Excluir</button>
+                                      </div>
+                                  </td>
+                                  <td>
+                                          <div style="margin-right: 25px; text-align: center;" class="border">
+                                              <h1 class="display-4" style="font-size: 1.5em; margin: 0 1% 0 1%;">Helicóptero de ataque</h1>
+                                              <button class="btnNav" style="margin: 0 auto;">Editar</button>
+                                              <button class="btnNav">Excluir</button>
+                                          </div>
+                                      </td>
+                          </tr>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
