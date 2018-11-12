@@ -5,6 +5,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NewJogoComponent } from './components/new-jogo/new-jogo.component';
 import { NewGeneroComponent } from './components/new-genero/new-genero.component';
 import { EditGeneroComponent } from './components/edit-genero/edit-genero.component';
+import { EditJogoComponent } from './components/edit-jogo/edit-jogo.component';
+import { JogosComponent } from './components/jogos/jogos.component';
+import { JogoDetailsComponent } from './components/jogo-details/jogo-details.component';
 
 export const ROUTES: Routes = [
     {
@@ -12,8 +15,16 @@ export const ROUTES: Routes = [
         component: HomeComponent
     },
     {
+        path: 'jogos',
+        component: JogosComponent
+    },
+    {
         path: 'jogos/new',
         component: NewJogoComponent
+    },
+    {
+        path: 'jogos/details/:id',
+        component: JogoDetailsComponent
     },
     {
         path: 'generos/new',
@@ -22,6 +33,10 @@ export const ROUTES: Routes = [
     {
         path: 'generos/edit/:id',
         component: EditGeneroComponent  
+    },
+    {
+        path: 'jogos/edit/:id',
+        component: EditJogoComponent  
     },
 ]
 

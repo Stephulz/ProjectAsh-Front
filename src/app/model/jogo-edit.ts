@@ -1,4 +1,4 @@
-export class Jogo{
+export class JogoEdit{
     constructor(
         public jogoId: string,
         public nome: string,
@@ -10,5 +10,6 @@ export class Jogo{
         public quantJogadores: string,
         public compatControle: string,
         public urlImagem: string,
+        public genero
       ) {  }
 }

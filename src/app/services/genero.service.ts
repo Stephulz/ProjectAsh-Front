@@ -31,12 +31,6 @@ export class GeneroService {
   buscarGeneroId(id:string, callback){
     return this.http.get(`/api/generos/${id}`)
     .subscribe(response => {
-      //this.tasksId=response.json();
-      // this.taskIdName=response.json()[0].taskName;
-      // this.taskIdStatus=response.json()[0].status;
-      // console.log(this.tasksId);
-      // console.log(this.taskIdName);
-      // console.log(this.taskIdStatus);
       let resp = response.json();
       //Callback:
       //tipicamente passada como argumento de outra função e/ou chamada quando um evento for acontecido,

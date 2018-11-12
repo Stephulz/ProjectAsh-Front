@@ -1,0 +1,84 @@
+    <nav aria-label="breadcrumb" style="margin: 3% 20% 3% 20%;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a [routerLink]="['']">Ash</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a [routerLink]="['../../../jogos']">Jogos</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a [routerLink]="['../../../jogos']">{{nomeGenero}}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{{nomeJogo}}</li>
+        </ol>
+    </nav>
+
+    <div style="width: 60%; margin: auto;">
+        <h1 class="display-4" style="margin: 0% 20% 3% 0%;"> {{nomeJogo}}</h1>
+        <hr>
+        <img src="{{jogo.urlImagem}}" style="width: 840px;
+            height: 440px;
+            margin-bottom: 3%;
+            border-style: solid;
+            border-width: 11px;">
+        <h1 class="display-4" style=" font-size: 2.9rem;">Sobre o jogo</h1>
+            <hr>
+            <!--PLATAFORMA-->
+            <div>
+                <fa-icon [icon]="faPlay"style="float: left"></fa-icon>
+                <p style="float: left">&nbsp;{{jogo.plataforma}}</p>
+            </div>
+            <br>
+            <br>
+            <div>
+                <!--QUANTJOGADORES-->
+                <div>
+                    <fa-icon [icon]="faUser" style="float:left;"> </fa-icon>
+                    <p style="float:left;">&nbsp;{{jogo.quantJogadores}}</p>
+                </div>
+                <br>
+                <br>
+                <!--COMPATCONTROLE-->
+                <div>
+                    <fa-icon [icon]="faGamepad" style="float:left;"></fa-icon>
+                    <p style="float:left;">&nbsp;{{jogo.compatControle}}</p>
+                </div>
+                <br>
+                <br>
+                <!--DESENVOLVEDORA-->
+                <div>
+                    <fa-icon [icon]="faIndustry" style="font-size: 1.4rem;float:left;"></fa-icon>
+                    <p style="float:left;">&nbsp;{{jogo.desenvolvedora}}</p>
+                </div>
+                <br>
+                <br>
+                <!--DATA DE LANÇAMENTO-->
+                <div>
+                    <fa-icon [icon]="faCalendarAlt" style="font-size: 1.4rem;float:left;"></fa-icon>
+                    <p style="float:left;">&nbsp;{{jogo.dataLancamento}}</p>
+                </div>
+                <br>
+                <br>
+                <!--GENERO-->
+                <div>
+                    <fa-icon [icon]="faGripHorizontal" style="font-size: 1.4rem;float:left;"></fa-icon>
+                    <p style="float:left;">&nbsp;{{nomeGenero}}</p>
+                </div>
+                <!--PREÇO-->
+                <br>
+                <br>
+                <div>
+                    <fa-icon [icon]="faDollarSign" style="float: left"></fa-icon>
+                    <p style="float: left">&nbsp;R${{jogo.preco}}</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <h1 class="display-4" style=" font-size: 2.9rem;">Descrição</h1>
+                <hr>
+                <p style="text-align: justify;
+            text-justify: inter-word;">
+                   {{jogo.descricao}}
+                </p>
+
+      </div>

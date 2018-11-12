@@ -21,11 +21,13 @@ export class NewJogoComponent implements OnInit {
 
   ngOnInit() {
     this.buscarGenero();
+    this.buscarJogo();
   }
 
   model = new Jogo("","","","","","","","","","");
   submitted = false;
   generoId:string;
+  nomeGenero:string;
 
   onSubmit(){
     this.submitted = true;
@@ -47,8 +49,21 @@ export class NewJogoComponent implements OnInit {
     });
   }
 
-  test(generoId:String){
+  buscarJogo(){
+    this.jogoService.buscarJogo((jogo)=>{
+      this.jogos = jogo;
+      console.log("JOGOS: "+JSON.stringify(this.jogos));
+    });
+  }
+
+  loadGenero(generoId:string){
     this.generoId = generoId;
     console.log("GENERO ID: "+this.generoId);
+  }
+
+  deletarJogo(jogoId:string){
+    this.jogoService.deleteJogo(jogoId).subscribe();
+    location.reload();
+    console.log("DELETE: "+jogoId);
   }
 }

@@ -43,7 +43,7 @@ export class NewGeneroComponent implements OnInit {
     });
   }
 
-  deletarGenero(id:String){
+  deletarGenero(id:string){
     this.generoService.deleteGenero(id).subscribe();
     location.reload();
     this.buscarGenero();

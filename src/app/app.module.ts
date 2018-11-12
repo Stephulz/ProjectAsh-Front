@@ -12,6 +12,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { NewJogoComponent } from './components/new-jogo/new-jogo.component';
 import { NewGeneroComponent } from './components/new-genero/new-genero.component';
 import { EditGeneroComponent } from './components/edit-genero/edit-genero.component';
+import { EditJogoComponent } from './components/edit-jogo/edit-jogo.component';
+import { JogosComponent } from './components/jogos/jogos.component';
+import { JogoDetailsComponent } from './components/jogo-details/jogo-details.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { EditGeneroComponent } from './components/edit-genero/edit-genero.compon
     NavComponent,
     NewJogoComponent,
     NewGeneroComponent,
-    EditGeneroComponent
+    EditGeneroComponent,
+    EditJogoComponent,
+    JogosComponent,
+    JogoDetailsComponent
   ],
   imports: [
     NgbModule,
@@ -28,7 +36,8 @@ import { EditGeneroComponent } from './components/edit-genero/edit-genero.compon
     HttpModule,
     routes,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
