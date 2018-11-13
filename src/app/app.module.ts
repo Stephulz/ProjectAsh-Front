@@ -15,8 +15,10 @@ import { EditGeneroComponent } from './components/edit-genero/edit-genero.compon
 import { EditJogoComponent } from './components/edit-jogo/edit-jogo.component';
 import { JogosComponent } from './components/jogos/jogos.component';
 import { JogoDetailsComponent } from './components/jogo-details/jogo-details.component';
+import { JogoSearchComponent } from './components/jogo-search/jogo-search.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     EditGeneroComponent,
     EditJogoComponent,
     JogosComponent,
-    JogoDetailsComponent
+    JogoDetailsComponent,
+    JogoSearchComponent
   ],
   imports: [
     NgbModule,

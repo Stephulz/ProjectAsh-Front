@@ -27,7 +27,7 @@ export class NewGeneroComponent implements OnInit {
       console.log(this.model);
       this.newGenero(this.model);
       console.log(this.model.nome);
-      location.reload();
+      //location.reload();
   }
 
   get diagnostic() { return JSON.stringify(this.model); }

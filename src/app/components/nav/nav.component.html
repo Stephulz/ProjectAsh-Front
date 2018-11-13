@@ -32,18 +32,28 @@
     </li>
 
     <li class="liSearch" style="background-color: black;">
-      <input type="text" placeholder="Pesquisar" />
-    <a href="generos/luta.html" 
-     class="btn btn-primary font-weight-normal"
-     style="text-transform: capitalize;
-     display: inline-block;">Pesquisar</a>
+      
+      <form (ngSubmit)="onSubmit()" #searchJogo="ngForm">
+      <input type="text"
+       placeholder="Pesquisar" 
+       [(ngModel)]="model.nomeJogo"
+        #name="ngModel" 
+        [ngModelOptions]="{standalone: true}"/>
+       </form>
   </li>
 
-  <li style="background-color: black;">
+  
+      <a [routerLink]="['jogos/search', model.nomeJogo]"
+      class="btn btn-primary font-weight-normal"
+      style="text-transform: capitalize;
+      display: inline-block;">Pesquisar</a>
+  
+
+  
     <a [routerLink]="['jogos/new']"
     class="btn btn-primary font-weight-normal" 
     style="text-transform: capitalize;
     display: inline-block;">Cadastrar Jogo</a>
-  </li>
+  
   </ul>
 </div>

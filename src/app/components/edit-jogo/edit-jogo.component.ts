@@ -48,6 +48,7 @@ export class EditJogoComponent implements OnInit {
       jogo.compatControle, jogo.urlImagem, jogo.genero);
       console.log(this.model);
       this.nomeGenero = jogo.genero.nome;
+      this.generoId = jogo.genero.id;
     });
   }
 

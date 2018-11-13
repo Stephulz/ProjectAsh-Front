@@ -11,6 +11,15 @@ export class JogoService {
 
    }
 
+   searchJogo(nome:string, callback){
+      return this.http.get(`/api/jogos/search?nome=${nome}`)
+          .subscribe(response => {
+            let respSearchJogo = response.json();
+            console.log("SERVICE LOG: "+response);
+            callback(respSearchJogo);
+          });
+   }
+
    newJogo( generoId:string, jogo:Jogo){
     return this.http.post(`/api/jogos/generos/${generoId}`, jogo)
   }

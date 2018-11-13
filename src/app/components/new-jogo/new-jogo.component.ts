@@ -63,7 +63,7 @@ export class NewJogoComponent implements OnInit {
 
   deletarJogo(jogoId:string){
     this.jogoService.deleteJogo(jogoId).subscribe();
-    location.reload();
+    //location.reload();
     console.log("DELETE: "+jogoId);
   }
 }

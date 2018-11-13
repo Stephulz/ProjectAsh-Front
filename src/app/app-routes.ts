@@ -8,6 +8,7 @@ import { EditGeneroComponent } from './components/edit-genero/edit-genero.compon
 import { EditJogoComponent } from './components/edit-jogo/edit-jogo.component';
 import { JogosComponent } from './components/jogos/jogos.component';
 import { JogoDetailsComponent } from './components/jogo-details/jogo-details.component';
+import { JogoSearchComponent } from './components/jogo-search/jogo-search.component';
 
 export const ROUTES: Routes = [
     {
@@ -27,6 +28,10 @@ export const ROUTES: Routes = [
         component: JogoDetailsComponent
     },
     {
+        path: 'jogos/search/:nomeJogo',
+        component: JogoSearchComponent
+    },
+    {
         path: 'generos/new',
         component: NewGeneroComponent 
     },
@@ -40,4 +45,4 @@ export const ROUTES: Routes = [
     },
 ]
 
-export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES); 
+export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES, {onSameUrlNavigation: 'reload'}); 
