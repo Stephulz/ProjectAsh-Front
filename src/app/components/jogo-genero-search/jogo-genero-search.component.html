@@ -1,0 +1,20 @@
+<nav aria-label="breadcrumb" style="margin: 3% 20% 3% 20%;">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+          <a [routerLink]="['']">Ash</a>
+      </li>
+      <li class="breadcrumb-item " aria-current="page">{{nomeGenero}}</li>
+      <li class="breadcrumb-item active" aria-current="page">Jogos</li>
+  </ol>
+</nav>
+
+<div class="row" style="width: 90%; margin: auto;">
+  <div *ngFor="let jogo of jogos; let i = index" class="card jogo" style="width: 18rem;">
+      <img class="card-img-top" src="{{jogo.urlImagem}}" alt="Game image" style="width: 286px; height:  135px;">
+      <div class="card-body jogo">
+          <h5 class="card-title">{{jogo.nome}}</h5>
+          <p class="card-text">{{jogo.desenvolvedora}}</p>
+          <a [routerLink]="['/jogos/details', jogo.jogoId]" class="btn btn-primary">Detalhes</a>
+      </div>
+  </div>
+</div>

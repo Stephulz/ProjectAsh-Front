@@ -39,6 +39,7 @@ export class EditJogoComponent implements OnInit {
     this.submitted = true;
     console.log(this.model);
     this.editJogo();
+    this.router.navigate(['/jogos']);
   }
 
   buscarJogoId() {
@@ -64,8 +65,9 @@ export class EditJogoComponent implements OnInit {
     this.jogoService.editJogo(this.activeRoute.snapshot.params['id'],this.generoId, this.model).subscribe();
   }
 
-  loadGenero(generoId:string){
+  loadGenero(generoId:string, generoNome:string){
     this.generoId = generoId;
-    console.log("GENERO ID: "+this.generoId);
+    this.nomeGenero = generoNome;
+    console.log("GENERO ID: "+this.generoId+" GENERO NOME: "+this.nomeGenero);
   }
 }

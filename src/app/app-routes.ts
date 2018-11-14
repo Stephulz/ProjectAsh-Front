@@ -9,6 +9,7 @@ import { EditJogoComponent } from './components/edit-jogo/edit-jogo.component';
 import { JogosComponent } from './components/jogos/jogos.component';
 import { JogoDetailsComponent } from './components/jogo-details/jogo-details.component';
 import { JogoSearchComponent } from './components/jogo-search/jogo-search.component';
+import { JogoGeneroSearchComponent } from './components/jogo-genero-search/jogo-genero-search.component';
 
 export const ROUTES: Routes = [
     {
@@ -32,6 +33,10 @@ export const ROUTES: Routes = [
         component: JogoSearchComponent
     },
     {
+        path: 'jogos/search/generos/:generoId',
+        component: JogoGeneroSearchComponent
+    },
+    {
         path: 'generos/new',
         component: NewGeneroComponent 
     },
@@ -42,6 +47,10 @@ export const ROUTES: Routes = [
     {
         path: 'jogos/edit/:id',
         component: EditJogoComponent  
+    },
+    {
+        path: '**',
+        component: HomeComponent 
     },
 ]
 

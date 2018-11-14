@@ -28,7 +28,7 @@
                             <a *ngFor="let genero of generos"
                              [(ngModel)]="generoId"
                              class="dropdown-item"
-                             (click)="loadGenero(genero.id)"
+                             (click)="loadGenero(genero.id, genero.nome)"
                              ngDefaultControl> 
                                  {{genero.nome}} 
                               </a>

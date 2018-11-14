@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneroService } from 'src/app/services/genero.service';
 import { Genero } from 'src/app/model/genero';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-genero',
@@ -13,6 +14,7 @@ export class NewGeneroComponent implements OnInit {
 
   constructor(
     private generoService:GeneroService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -27,7 +29,7 @@ export class NewGeneroComponent implements OnInit {
       console.log(this.model);
       this.newGenero(this.model);
       console.log(this.model.nome);
-      //location.reload();
+      location.reload();
   }
 
   get diagnostic() { return JSON.stringify(this.model); }

@@ -20,6 +20,15 @@ export class JogoService {
           });
    }
 
+   searchJogoByGenero(generoId:string, callback){
+    return this.http.get(`/api/jogos/search?genero=${generoId}`)
+        .subscribe(response => {
+          let respSearchJogoByGenero = response.json();
+          console.log("SERVICE LOG: "+response);
+          callback(respSearchJogoByGenero);
+        });
+ }
+
    newJogo( generoId:string, jogo:Jogo){
     return this.http.post(`/api/jogos/generos/${generoId}`, jogo)
   }

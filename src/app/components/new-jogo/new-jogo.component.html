@@ -21,7 +21,7 @@
                               data-toggle="dropdown" 
                               aria-haspopup="true" 
                               aria-expanded="false">
-                                Gênero
+                                {{nomeGenero}}
                               </button>
                                   <a [routerLink]="['../../generos/new']"
                                   class="btn btn-secondary">
@@ -31,7 +31,7 @@
                                 <a *ngFor="let genero of generos"
                                  [(ngModel)]="generoId"
                                  class="dropdown-item"
-                                 (click)="loadGenero(genero.id)"
+                                 (click)="loadGenero(genero.id, genero.nome)"
                                  ngDefaultControl> 
                                      {{genero.nome}} 
                                   </a>

@@ -38,5 +38,4 @@ export class NavComponent implements OnInit {
       console.log("GENEROS: "+JSON.stringify(this.generos));
     });
   }
-
 }

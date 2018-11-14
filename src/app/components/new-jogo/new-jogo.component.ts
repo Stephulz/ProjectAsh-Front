@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneroService } from 'src/app/services/genero.service';
 import { JogoService } from 'src/app/services/jogo.service';
-import { Genero } from 'src/app/model/genero';
 import { Jogo } from 'src/app/model/jogo';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-jogo',
@@ -17,6 +17,7 @@ export class NewJogoComponent implements OnInit {
   constructor(
     private generoService:GeneroService,
     private jogoService:JogoService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -27,13 +28,14 @@ export class NewJogoComponent implements OnInit {
   model = new Jogo("","","","","","","","","","");
   submitted = false;
   generoId:string;
-  nomeGenero:string;
+  nomeGenero:string = "Genero";
 
   onSubmit(){
     this.submitted = true;
       console.log(this.model);
       this.newJogo(this.generoId, this.model);
-      //location.reload();
+      location.reload();
+      //this.router.navigate(['/jogos']);
   }
 
   get diagnostic() { return JSON.stringify(this.model); }
@@ -56,14 +58,16 @@ export class NewJogoComponent implements OnInit {
     });
   }
 
-  loadGenero(generoId:string){
+  loadGenero(generoId:string, nomeGenero:string){
     this.generoId = generoId;
-    console.log("GENERO ID: "+this.generoId);
+    this.nomeGenero = nomeGenero;
+    console.log("GENERO ID: "+this.generoId+" GENERO NOME: "+this.nomeGenero);
   }
 
   deletarJogo(jogoId:string){
     this.jogoService.deleteJogo(jogoId).subscribe();
-    //location.reload();
+    location.reload();
+    //this.buscarJogo();
     console.log("DELETE: "+jogoId);
   }
 }
