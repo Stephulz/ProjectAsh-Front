@@ -36,98 +36,106 @@
                         </div>
                       <br>
                       <div style="width: 100%; overflow: hidden;">
-                              <form (ngSubmit)="onSubmit()" #newGenero="ngForm">
-                                  <div style="width: 300px; float: left;" >
-                                      <input   
-                                      type="text" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.urlImagem" 
-                                      name="urlImagem"
-                                      class="form-control" 
-                                      placeholder="URL Imagem*"  
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      />
-                                      <input  
-                                      type="text"
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.nome" 
-                                      name="nome"
-                                      class="form-control" 
-                                      placeholder="Nome*"  
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      />
-                                      <input   
-                                      type="text" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.desenvolvedora" 
-                                      name="desenvolvedora"
-                                      class="form-control" 
-                                      placeholder="Desenvolvedora*"  
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      />
-                                      <input   
-                                      type="text" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.plataforma" 
-                                      name="plataforma"
-                                      class="form-control" 
-                                      placeholder="Plataforma*"  
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      />
-                                  </div>
-
-                                  <div style="margin-left: 300x;">
-                                      <input   
-                                      type="text" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.quantJogadores" 
-                                      name="quantJogadores"
-                                      class="form-control" 
-                                      placeholder="Quantidade Jogadores*" 
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                       />
-                                      <input   
-                                      type="text" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.compatControle" 
-                                      name="compatJogadores" 
-                                      class="form-control" 
-                                      placeholder="Compatibilidade Controle*" 
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      />
-                                      <input   
-                                      type="date" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.dataLancamento" 
-                                      name="dataLancamento"
-                                      class="form-control" 
-                                      placeholder="Data de Lançamento*"  
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      />
-                                      <input   
-                                      type="number" 
-                                      #name="ngModel" 
-                                      [(ngModel)]="model.preco" 
-                                      name="preco" 
-                                      class="form-control"
-                                      placeholder="Preço*" 
-                                      style="max-width: 240px; margin: 0px 0px 20px 0px;"
-                                      min="1" 
-                                      max="1000"
-                                      step="any"
-                                      />
-                                  </div>
-                                  <br>
-                                  <h1 class="display-1" style="font-size: 2.8em;">Descrição</h1>
-                                  <br>
-                                  <textarea 
-                                  #name="ngModel" 
-                                  [(ngModel)]="model.descricao" 
-                                  name="descricao" 
-                                  placeholder="Descrição..."
-                                  cols="70" 
-                                  rows="5"
-                                  >
+                            <form (ngSubmit)="onSubmit()" #newGenero="ngForm">
+                                    <div style="width: 300px; float: left;" >
+                                        <h1 class="display-1" style="font-size: 1.5em;">URL Imagem</h1>
+                                        <input   
+                                        type="text" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.urlImagem" 
+                                        name="urlImagem"
+                                        class="form-control" 
+                                        placeholder="URL Imagem*"  
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <h1 class="display-1" style="font-size: 1.5em;">Nome</h1>
+                                        <input  
+                                        type="text"
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.nome" 
+                                        name="nome"
+                                        class="form-control" 
+                                        placeholder="Nome*"  
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <h1 class="display-1" style="font-size: 1.5em;">Desenvolvedora</h1>
+                                        <input   
+                                        type="text" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.desenvolvedora" 
+                                        name="desenvolvedora"
+                                        class="form-control" 
+                                        placeholder="Desenvolvedora*"  
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <h1 class="display-1" style="font-size: 1.5em;">Plataforma</h1>
+                                        <input   
+                                        type="text" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.plataforma" 
+                                        name="plataforma"
+                                        class="form-control" 
+                                        placeholder="Plataforma*"  
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                    </div>
+  
+                                    <div style="margin-left: 300x;">
+                                          <h1 class="display-1" style="font-size: 1.5em;">Quantidade Jogadores</h1>
+                                        <input   
+                                        type="text" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.quantJogadores" 
+                                        name="quantJogadores"
+                                        class="form-control" 
+                                        placeholder="Quantidade Jogadores*" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                         />
+                                         <h1 class="display-1" style="font-size: 1.5em;">Compatibilidade Controle</h1>
+                                        <input   
+                                        type="text" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.compatControle" 
+                                        name="compatJogadores" 
+                                        class="form-control" 
+                                        placeholder="Compat Controle*" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <h1 class="display-1" style="font-size: 1.5em;">Data de Lançamento</h1>
+                                        <input   
+                                        type="date" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.dataLancamento" 
+                                        name="dataLancamento"
+                                        class="form-control" 
+                                        placeholder="Data de Lançamento*"  
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        />
+                                        <h1 class="display-1" style="font-size: 1.5em;">Preço</h1>
+                                        <input   
+                                        type="number" 
+                                        #name="ngModel" 
+                                        [(ngModel)]="model.preco" 
+                                        name="preco" 
+                                        class="form-control"
+                                        placeholder="Preço*" 
+                                        style="max-width: 240px; margin: 0px 0px 20px 0px;"
+                                        min="1" 
+                                        max="1000"
+                                        step="any"
+                                        />
+                                    </div>
+                                    <br>
+                                    <h1 class="display-1" style="font-size: 2.8em;">Descrição</h1>
+                                    <br>
+                                    <textarea 
+                                    #name="ngModel" 
+                                    [(ngModel)]="model.descricao" 
+                                    name="descricao" 
+                                    placeholder="Descrição..."
+                                    cols="70" 
+                                    rows="5"
+                                    >
                                   </textarea>
                                   <br>
                                   <br>

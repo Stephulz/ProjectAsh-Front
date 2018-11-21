@@ -8,20 +8,8 @@
       <!-- Nível 1 -->
       <!-- submenu -->
       <ul class="sub-menu clearfix">
-        <li>
-          <a href="#">Aventura</a>
-        </li>
-        <li>
-          <a [routerLink]="['../../jogos']" >Luta</a>
-        </li>
-        <li>
-          <a href="#">FPS</a>
-        </li>
-        <li>
-          <a href="#">RPG</a>
-        </li>
-        <li>
-          <a href="#">MMO</a>
+        <li *ngFor="let genero of generos;">
+          <a [routerLink]="['../../jogos']">{{genero.nome}}</a>
         </li>
       </ul>
       <!-- submenu -->

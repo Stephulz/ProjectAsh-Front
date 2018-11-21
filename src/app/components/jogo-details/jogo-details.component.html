@@ -25,51 +25,58 @@
             <hr>
             <!--PLATAFORMA-->
             <div>
+                <h1 class="display-1" style="font-size: 1.5em;">Plataforma</h1>
                 <fa-icon [icon]="faPlay"style="float: left"></fa-icon>
-                <p style="float: left">&nbsp;{{jogo.plataforma}}</p>
+                <p style="float: left">&nbsp;&nbsp;{{jogo.plataforma}}</p>
             </div>
             <br>
             <br>
             <div>
                 <!--QUANTJOGADORES-->
                 <div>
+                    <h1 class="display-1" style="font-size: 1.5em;">Quantidade Jogadores</h1>
                     <fa-icon [icon]="faUser" style="float:left;"> </fa-icon>
-                    <p style="float:left;">&nbsp;{{jogo.quantJogadores}}</p>
+                    <p style="float:left;">&nbsp;&nbsp;{{jogo.quantJogadores}}</p>
                 </div>
                 <br>
                 <br>
                 <!--COMPATCONTROLE-->
                 <div>
+                    <h1 class="display-1" style="font-size: 1.5em;">Compatibilidade Controle</h1>
                     <fa-icon [icon]="faGamepad" style="float:left;"></fa-icon>
-                    <p style="float:left;">&nbsp;{{jogo.compatControle}}</p>
+                    <p style="float:left;">&nbsp;&nbsp;{{jogo.compatControle}}</p>
                 </div>
                 <br>
                 <br>
                 <!--DESENVOLVEDORA-->
                 <div>
+                    <h1 class="display-1" style="font-size: 1.5em;">Desenvolvedora</h1>
                     <fa-icon [icon]="faIndustry" style="font-size: 1.4rem;float:left;"></fa-icon>
-                    <p style="float:left;">&nbsp;{{jogo.desenvolvedora}}</p>
+                    <p style="float:left;">&nbsp;&nbsp;{{jogo.desenvolvedora}}</p>
                 </div>
                 <br>
                 <br>
                 <!--DATA DE LANÇAMENTO-->
                 <div>
+                    <h1 class="display-1" style="font-size: 1.5em;">Data de Lançamento</h1>
                     <fa-icon [icon]="faCalendarAlt" style="font-size: 1.4rem;float:left;"></fa-icon>
-                    <p style="float:left;">&nbsp;{{jogo.dataLancamento}}</p>
+                    <p style="float:left;">&nbsp;&nbsp;{{jogo.dataLancamento}}</p>
                 </div>
                 <br>
                 <br>
                 <!--GENERO-->
                 <div>
+                    <h1 class="display-1" style="font-size: 1.5em;">Gênero</h1>
                     <fa-icon [icon]="faGripHorizontal" style="font-size: 1.4rem;float:left;"></fa-icon>
-                    <p style="float:left;">&nbsp;{{nomeGenero}}</p>
+                    <p style="float:left;">&nbsp;&nbsp;{{nomeGenero}}</p>
                 </div>
                 <!--PREÇO-->
                 <br>
                 <br>
                 <div>
+                    <h1 class="display-1" style="font-size: 1.5em;">Preço</h1>
                     <fa-icon [icon]="faDollarSign" style="float: left"></fa-icon>
-                    <p style="float: left">&nbsp;R${{jogo.preco}}</p>
+                    <p style="float: left">&nbsp;&nbsp;R$ {{jogo.preco ? jogo.preco: "Free"}}</p>
                 </div>
             </div>
             <br>

@@ -13,7 +13,12 @@
             <div class="card-body jogo">
                 <h5 class="card-title">{{jogo.nome}}</h5>
                 <p class="card-text">{{jogo.desenvolvedora}}</p>
-                <a [routerLink]="['/jogos/details', jogo.jogoId]" class="btn btn-primary">Detalhes</a>
+                <a [routerLink]="['/jogos/details', jogo.jogoId]" class="btn btn-primary" 
+                style="margin: 0 1% 0 1%">Detalhes</a>
+                <a [routerLink]="['/jogos/edit', jogo.jogoId]" class="btn btn-primary"
+                style="margin: 0 1% 0 1%">Editar</a>
+                <button class="btn btn-danger" (click)="deletarJogo(jogo.jogoId)"
+                > Excluir </button>
             </div>
         </div>
     </div>

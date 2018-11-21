@@ -52,7 +52,6 @@ export class EditJogoComponent implements OnInit {
       this.generoId = jogo.genero.id;
     });
   }
-
   
   buscarGenero(){
     this.generoService.buscarGenero((genero)=>{

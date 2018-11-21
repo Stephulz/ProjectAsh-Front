@@ -26,4 +26,11 @@ export class JogosComponent implements OnInit {
     });
   }
 
+  deletarJogo(jogoId:string){
+    this.jogoService.deleteJogo(jogoId).subscribe();
+    location.reload();
+    //this.buscarJogo();
+    console.log("DELETE: "+jogoId);
+  }
+
 }
