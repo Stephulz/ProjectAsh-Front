@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JogoSearch } from '../../model/jogo-search';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { GeneroService } from 'src/app/services/genero.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private generoService:GeneroService,
     private router:Router
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.buscarGenero();
@@ -38,4 +38,9 @@ export class NavComponent implements OnInit {
       console.log("GENEROS: "+JSON.stringify(this.generos));
     });
   }
+
+  clickGenero(generoId:string){
+    this.redirectTo("jogos/search/generos/"+generoId);
+  }
+
 }

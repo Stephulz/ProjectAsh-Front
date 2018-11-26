@@ -9,7 +9,9 @@
       <!-- submenu -->
       <ul class="sub-menu clearfix">
         <li *ngFor="let genero of generos;">
-          <a [routerLink]="['../../jogos']">{{genero.nome}}</a>
+          <a (click)="clickGenero(genero.id)"
+             style="cursor:pointer;"
+          >{{genero.nome}}</a>
         </li>
       </ul>
       <!-- submenu -->
@@ -19,8 +21,7 @@
       <a href="#">Contato</a>
     </li>
 
-    <li class="liSearch" style="background-color: black;">
-      
+    <li class="liSearch" style="background-color: black;">  
       <form (ngSubmit)="onSubmit()" #searchJogo="ngForm">
       <input type="text"
        placeholder="Pesquisar" 
@@ -34,8 +35,8 @@
       <a [routerLink]="['jogos/search', model.nomeJogo]"
       class="btn btn-primary font-weight-normal"
       style="text-transform: capitalize;
-      display: inline-block;">Pesquisar</a>
-  
+      display: inline-block;"
+      (click)="onSubmit()">Pesquisar</a>
 
   
     <a [routerLink]="['jogos/new']"

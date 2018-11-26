@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GeneroService } from 'src/app/services/genero.service';
 import { JogoService } from 'src/app/services/jogo.service';
 import { Jogo } from 'src/app/model/jogo';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-new-jogo',
@@ -17,8 +17,8 @@ export class NewJogoComponent implements OnInit {
   constructor(
     private generoService:GeneroService,
     private jogoService:JogoService,
-    private router:Router
-  ) { }
+    private router:Router,
+  ) {}
 
   ngOnInit() {
     this.buscarGenero();

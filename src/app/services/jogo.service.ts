@@ -21,10 +21,10 @@ export class JogoService {
    }
 
    searchJogoByGenero(generoId:string, callback){
-    return this.http.get(`/api/jogos/search?genero=${generoId}`)
+    return this.http.get(`/api/jogos/search/genero?genero=${generoId}`)
         .subscribe(response => {
           let respSearchJogoByGenero = response.json();
-          console.log("SERVICE LOG: "+response);
+          console.log("SERVICE searchJogoByGenero LOG: "+response);
           callback(respSearchJogoByGenero);
         });
  }
