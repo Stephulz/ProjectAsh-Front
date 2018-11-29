@@ -28,9 +28,10 @@ export class JogoDetailsComponent implements OnInit {
     private jogoService:JogoService,
     private generoService:GeneroService,
     private activeRoute: ActivatedRoute,
-    private router:Router,
-  ) { 
-  }
+    private router:Router
+  ) { }
+
+  idGenero:string;
   nomeGenero:string;
   nomeJogo:string;
   jogo:Jogo;
@@ -42,11 +43,21 @@ export class JogoDetailsComponent implements OnInit {
 
   buscarJogoId() {
     this.jogoService.buscarJogoId(this.activeRoute.snapshot.params['id'], (jogo)=>{
+      this.idGenero = jogo.genero.id;
       this.nomeGenero = jogo.genero.nome;
       this.nomeJogo = jogo.nome;
       this.jogo = jogo;
       console.log(jogo);
     });
+  }
+
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
+  }  
+
+  clickGenero(generoId:string){
+    this.redirectTo("jogos/search/generos/"+generoId);
   }
 
 }

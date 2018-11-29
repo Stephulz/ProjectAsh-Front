@@ -7,7 +7,9 @@
                 <a [routerLink]="['../../../jogos']">Jogos</a>
             </li>
             <li class="breadcrumb-item">
-                <a [routerLink]="['../../../jogos']">{{nomeGenero}}</a>
+                <a (click)="clickGenero(idGenero)" [routerLink]>
+                    {{nomeGenero}}
+                </a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">{{nomeJogo}}</li>
         </ol>
